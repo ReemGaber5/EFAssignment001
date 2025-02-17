@@ -13,6 +13,10 @@ namespace EFAssignment001.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public int Top_ID { get; set; }
+        public Topic Topic { get; set; }
+
+        public ICollection<Stud_Course> StudCourses { get; set; } = new HashSet<Stud_Course>();
+        public ICollection<Course_Inst> CourseInstructors { get; set; } = new HashSet<Course_Inst>();
 
     }
 }

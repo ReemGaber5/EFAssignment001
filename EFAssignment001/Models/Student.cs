@@ -19,6 +19,9 @@ namespace EFAssignment001.Models
         [Range(22,60)]
         public int Age { get; set; }
         public int Dep_Id { get; set; }
+        public Department Department { get; set; }
+
+        public ICollection<Stud_Course> StudCourses { get; set; }=new HashSet<Stud_Course>();
 
         public override string ToString()
         {

@@ -15,5 +15,8 @@ namespace EFAssignment001.Models
         public string Address { get; set; }
         public decimal HourRate { get; set; }
         public int Dept_ID { get; set; }
+        public Department Department { get; set; }
+        public ICollection<Department> ManagedDepartments { get; set; }= new HashSet<Department>();
+        public ICollection<Course_Inst> CourseInstructors { get; set; } = new HashSet<Course_Inst>();
     }
 }

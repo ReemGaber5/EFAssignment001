@@ -12,5 +12,8 @@ namespace EFAssignment001.Models
         public int ID { get; set; }
         [Required]
         public string Name { get; set; }
+
+        public ICollection<Course> Courses { get; set; } = new HashSet<Course>();
+
     }
 }

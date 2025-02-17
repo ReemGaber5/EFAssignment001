@@ -11,5 +11,7 @@ namespace EFAssignment001.Models
         public int Stud_ID { get; set; }
         public int Course_ID { get; set; }
         public string Grade { get; set; }
+        public Student Student { get; set; }
+        public Course Course { get; set; }
     }
 }
