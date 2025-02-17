@@ -12,5 +12,9 @@ namespace EFAssignment001.Models
         public string Name { get; set; }
         public int Ins_ID { get; set; }
         public DateTime HiringDate { get; set; }
+
+        public Instructor Manager { get; set; }
+        public ICollection<Student> Students { get; set; } = new HashSet<Student>();
+        public ICollection<Instructor> Instructors { get; set; } = new HashSet<Instructor>();
     }
 }
